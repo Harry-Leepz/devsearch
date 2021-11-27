@@ -6,8 +6,8 @@ from django.http import HttpResponse
 
 
 def projects(request):
-    return HttpResponse('This is the ALL projects page')
+    return render(request, 'projects.html')
 
 
 def project(request, pk):
-    return HttpResponse('This is a SINGLE project page' + ' ' + str(pk))
+    return render(request, 'single-project.html')
