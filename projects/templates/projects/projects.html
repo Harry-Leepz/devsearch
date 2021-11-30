@@ -1,5 +1,22 @@
 <h1>ALL MY PROJECTS TEMPLATE</h1>
 
-{% for project in projects %}
-  <a href="{% url 'project' project.id %}">{{ project.title }}</a> 
-{% endfor %}
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Votes</th>
+    <th>Ratio</th>
+    <th>Created</th>
+    <th>Link</th>
+  </tr>
+  {% for project in projects %}
+    <tr>
+      <td>{{ project.id }}</td>
+      <td>{{ project.title }}</td>
+      <td>{{ project.vote_total }}</td>
+      <td>{{ project.vote_ratio }} %</td>
+      <td>{{ project.created }}</td>
+      <td><a href="{% url 'project' project.id %}">{{ project.title }}</a> </td>
+    </tr>
+  {% endfor %}
+</table>
