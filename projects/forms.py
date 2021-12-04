@@ -5,4 +5,4 @@ from .models import Project
 class ProjectFrom(ModelForm):
     class Meta:
         model = Project
-        field = '__all__'
+        fields = '__all__'
