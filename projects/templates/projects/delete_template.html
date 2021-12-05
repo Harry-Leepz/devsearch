@@ -4,11 +4,7 @@
 
 <form action="">
   <p>Are you sure you want to delete "{{ object }}"</p>
-  <a href="{% url 'projects' %}">
-    <button>
-      Back
-    </button>
-  </a>
+  <a href="{% url 'projects' %}">Go Back </a>
   <input type="submit" value="confirm">
 </form>
 {% endblock %}
