@@ -35,6 +35,7 @@
           <li class="header__menuItem"><a href="">Projects</a></li>
           <li class="header__menuItem"><a href="">Inbox</a></li>
           <li class="header__menuItem"><a href="">My Account</a></li>
+          <li class="header__menuItem"><a href="{% url 'create-project' %}" class="btn btn--sub">Add Project</a></li>
           <li class="header__menuItem"><a href="" class="btn btn--sub">Login/Sign Up</a></li>
         </ul>
       </nav>
@@ -42,8 +43,6 @@
   </header>
   <img src="{% static 'images/logo.svg' %}" alt="">
 
-
-  <a href="{% url 'create-project' %}">Create a project</a>
   {% block content %}
 
   {% endblock %}
